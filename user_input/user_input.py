@@ -5,6 +5,14 @@ def is_palindrome(text):
     return text == reverse(text)
 
 something = input('Введите текст: ')
+
+forbidden =('.','?','!',':',';','-','—',' ')
+if simbol in forbidden:
+    if simbol in something:
+        something = something.replace(simbol,"")
+   
+print(something)
+
 if (is_palindrome(something)):
     print('Да это палиндром')
 else:
