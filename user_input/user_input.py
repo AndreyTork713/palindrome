@@ -6,16 +6,11 @@ def is_palindrome(text):
 
 something = input('Введите текст: ')
 something = something.lower()
-
-
-
-forbidden = ('.','?','!',':',';','-','—',' ')
-simbol = ' '
-if simbol in forbidden:
-    if simbol in something:
-        something = something.replace(simbol,'')
+something = "".join(c for c in something if c not in ('!','.',':',' '))
    
 print(something)
+print(reverse(something))
+
 
 if (is_palindrome(something)):
     print('Да это палиндром')
